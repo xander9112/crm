@@ -1,0 +1,86 @@
+@import "../../../assets/styles/utils/variables";
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.nav {
+  width: 60px;
+  background: $--color-nav-bar-background;
+  overflow: hidden;
+  transition: $--all-transition;
+
+  &-inner {
+    width: 250px;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    font-size: 20px;
+    color: $--color-white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: $--all-transition;
+    background: transparent;
+
+    &--toggle {
+      background: #474747;
+
+      .nav-item-icon {
+        transform: rotate(0deg);
+        transition: $--md-fade-transition;
+      }
+
+      .nav-item-text {
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+    }
+
+    &--active {
+      background: $--color-warning;
+    }
+
+    &:hover:not(.nav-item--active) {
+      background: #6d6d6d;
+    }
+  }
+
+  &-item-icon {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 60px;
+  }
+
+  &-item-icon img {
+    width: 24px;
+    height: auto;
+  }
+
+  &-item-text {
+    flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: $--font-lato-black;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+
+  &--open {
+    width: 250px;
+
+    .nav-item--toggle {
+      .nav-item-icon {
+        transform: rotate(-90deg)
+      }
+    }
+  }
+}

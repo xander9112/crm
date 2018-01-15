@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+    production: true,
+    apiUrl: 'https://api-dev.hivecrm.ru',
+    domain: 'hivecrm.ru'
 };
