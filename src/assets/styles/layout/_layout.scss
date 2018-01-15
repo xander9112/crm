@@ -8,3 +8,23 @@ body {
   width: 100%;
   height: 100%;
 }
+
+a {
+  color: $--color-text-primary;
+}
+
+.g-aside-menu {
+  flex: 0 1 60px;
+}
+
+.g-main-component {
+  flex: 1 1 auto;
+  background: $--color-main-background;
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
