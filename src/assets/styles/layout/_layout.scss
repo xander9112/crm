@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  font-family: $--font-lato-regular;
 }
 
 .g-main-container {
@@ -13,18 +14,32 @@ a {
   color: $--color-text-primary;
 }
 
-.g-aside-menu {
+.p-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.g-sidebar {
   flex: 0 1 60px;
 }
 
-.g-main-component {
+.g-content {
   flex: 1 1 auto;
   background: $--color-main-background;
 
-  &__inner {
+  &__header {
+    height: 60px;
     display: flex;
-    width: 100%;
+    align-items: center;
+    background: $--color-white;
+    padding: 0 20px;
+  }
+
+  &__body {
     padding: 20px;
     box-sizing: border-box;
   }
 }
+
+@import "./form/module";

@@ -1,15 +1,17 @@
-<header class="g-header">
+<header class="g-content__header">
     <div class="g-header__title">
         Рабочий стол
     </div>
     <div class="g-header__nav">
         <ul>
-            <li class="g-header__nav-item" routerLinkActive="g-header__nav-item_active" [routerLinkActiveOptions]="{exact:true}">
+            <li class="g-header__nav-item" routerLinkActive="g-header__nav-item_active"
+                [routerLinkActiveOptions]="{exact:true}">
                 <a routerLink="/home">
                     Рабочий стол
                 </a>
             </li>
-            <li class="g-header__nav-item" routerLinkActive="g-header__nav-item_active" [routerLinkActiveOptions]="{exact:true}">
+            <li class="g-header__nav-item" routerLinkActive="g-header__nav-item_active"
+                [routerLinkActiveOptions]="{exact:true}">
                 <a routerLink="sales">
                     Продажи
                 </a>
@@ -17,5 +19,6 @@
         </ul>
     </div>
 </header>
-
-<router-outlet></router-outlet>
+<div class="g-content__body">
+    <router-outlet></router-outlet>
+</div>

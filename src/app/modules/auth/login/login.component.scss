@@ -1,0 +1,32 @@
+@import "../../../../assets/styles/utils/variables";
+
+:host {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.login-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: mix($--color-nav-bar-background, $--color-black, 60%);
+}
+
+.login-block {
+  &__system {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $--color-white;
+    font-family: $--font-lato-light;
+
+    &-name {
+      color: $--color-primary;
+    }
+  }
+}

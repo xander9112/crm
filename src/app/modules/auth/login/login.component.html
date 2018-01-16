@@ -1,3 +1,37 @@
-<p>
-  login works!
-</p>
+<main class="g-content">
+    <div class="login-page">
+        <div class="login-block">
+            <img src="/assets/images/logo-index.png" alt="">
+
+            <div class="login-block__system">
+                <div class="login-block__system-label">
+                    вход в&nbsp;
+                </div>
+                <div class="login-block__system-name">
+                    dev
+                </div>
+            </div>
+
+            <div class="login-block__form">
+                <form (ngSubmit)="loginUser()" novalidate>
+                    <div class="form-group">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Номер телефона"
+                               [(ngModel)]="user.phone"
+                               name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password"
+                               class="form-control"
+                               placeholder="Пароль"
+                               [(ngModel)]="user.password"
+                               name="password"
+                               required>
+                    </div>
+                    <app-button type="submit" className="btn_default" [disabled]="true">Войти</app-button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
